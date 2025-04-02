@@ -3,3 +3,9 @@ function main() {
 }
 
 main();
+
+function main2() {
+  return console.log("Hello World 2");
+}
+
+main2();
