@@ -1,0 +1,29 @@
+reviews:
+  path_instructions:
+    - path: "main.js"
+      instructions: >
+        Review the JavaScript code against the Google JavaScript style guide and point out any mismatches
+
+        Early Return Pattern Rules:
+        1. 함수 내에서 조건부 로직이 있는 경우, 얼리 리턴 패턴을 사용해야 합니다
+        2. 중첩된 if 문을 피하고 얼리 리턴으로 코드의 가독성을 높여야 합니다
+        3. 예시:
+           ```javascript
+           // 좋은 예시
+           function process(data) {
+             if (!data) return null;
+             if (data.length === 0) return [];
+             // 메인 로직
+           }
+           
+           // 피해야 할 예시
+           function process(data) {
+             if (data) {
+               if (data.length > 0) {
+                 // 메인 로직
+               }
+               return [];
+             }
+             return null;
+           }
+           ```
